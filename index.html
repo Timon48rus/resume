@@ -7,38 +7,77 @@
     <meta name="keywords" content="cv, gusev, artem">
     <meta name="description" content="Сайт-резюме, Гусева Артема">
     <title>Резюме Гусева Артема</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        @media (max-width: 570px) {
+            .info {
+                display: block;
+                text-align: center;
+                /* border-radius: 10px; */
+                /* background-color: rgb(253, 225, 182); */
+                font-size: 10px;
+                /* text-align: center; */
+                /* padding: 2px; */
+                /* border: 3px solid darkgrey; */
+                /* margin: auto; */
+            }
+        }
+
+
+
+    </style>
+
 </head>
 <body>
 
-    <img src="img/ava.jpg" width="110" alt="аватар резюме">
+<div class="container">
 
-
-
-
-    <h1><strong>Гусев Артем Александрович</strong></h1>
-
-
-    <p>38 лет</p>
-
-
-    <p><em>Обучаюсь на разработчика в Result School</em></p>
+<div class="info" >
     
-    <hr>
+    <img src="img/ava.jpg"  class="ava" alt="аватар резюме">
+    
+    <div class="info-block">
+     <h1><strong>Гусев Артем Александрович</strong></h1>
 
+        <div id="inform" >
+
+         <p>38 лет</p>
+            <p><em>Обучаюсь на разработчика в Result School</em></p>
+
+        </div>    
+    </div>
+
+</div>
+    
+    <!-- <hr> -->
+
+<div class="hobby">
     <h2> <strong> Мои хобби </strong> </h2>
 
-    <ul>
+    <ul class="list">
         <li>Путешествия</li>
         <li>Активный отдых</li>
         <li>Саморазвитие</li>
         <li>Чтение</li>
     </ul>
-
-    <hr>
-
+</div>
+    <!-- <hr> -->
+<div class="work">
     <h2> <strong>Опыт работы</strong> </h2>
 
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Компания</th>
@@ -48,65 +87,69 @@
         </thead>
         <tbody>
             <tr>
-                <td>Nike</td>
-                <td>manager</td>
-                <td>2018-2019</td>
+                <td class="left">Nike</td>
+                <td class="left">manager</td>
+                <td class="centr">2018-2019</td>
             </tr>
 
             <tr>
-                <td>Adidas</td>
-                <td>midle manager</td>
-                <td>2019-2020</td>
+                <td class="left">Adidas</td>
+                <td class="left">midle manager</td>
+                <td class="centr">2019-2020</td>
             </tr>
 
             <tr>
-                <td>Puma</td>
-                <td>senior manager</td>
-                <td>2020 - настоящее время</td>
+                <td class="left">Puma</td>
+                <td class="left">senior manager</td>
+                <td class="centr">2020 - настоящее время</td>
             </tr>
         </tbody>
     </table>
-
-    <hr>
-
-    <h2> <strong> Соцсети </strong> </h2>
-
+</div>
+    <!-- <hr> -->
+<div class="network">
+    <h2> <strong> Список социальных сетей </strong> </h2>
+<p>
     <a href="https://vk.com/" target="_blank" >Вконтакте</a>
     |
     <a href="https://e.mail.ru/" target="_blank" > Mail</a>
+</p>
+</div>
 
-    <hr>
+    <!-- <hr> -->
+<div class="contact">
+    
 
-    <h2><strong>Связаться со мной</strong></h2>
+    <form class="form">
+        <h2><strong>Связаться со мной</strong></h2>
 
-    <form>
+        <div class="form-row">
 
-        <div>
-            <label for="name">Ваше имя:</label>
-            <input type="text" id="name"
-            placeholder="Введите имя">
+            <div class="form-group">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name"
+                placeholder="Введите имя">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Ваш email:</label>
+                <input type="email" id="email"
+                placeholder="Введите email">
+            </div>
         </div>
 
-        <div>
-            <label for="email">Ваш email:</label>
-            <input type="email" id="email"
-            placeholder="Введите email">
-        </div>
+            <div class="form-group">
+                <label for="message">Ваше сообщение:</label>
+                <textarea id="message" cols="20" rows="5" 
+                placeholder="Введите сообщение ..."></textarea>
+            </div>
 
-        <div>
-            <label for="message">Ваше сообщение:</label>
-            <br>
-            <textarea id="message" cols="20" rows="5" 
-            placeholder="Введите сообщение ..."
-            ></textarea>
-        </div>
-
-        <button type="submit">Отправить!</button>
+        <button type="submit" class="btn">Отправить!</button>
 
     </form>
+</div>
 
-
-
+</div>
     
     
 </body>
